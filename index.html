@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Credit Card Fraud Detection Model</title>
+</head>
+<body>
+    <h1>Credit Card Fraud Detection Model</h1>
+    <p>Enter the following features separated by commas to check if the transaction is legitimate or fraudulent:</p>
+    <form method="post">
+        <input type="text" name="input_features" placeholder="Input All features">
+        <input type="submit" value="Submit">
+    </form>
+    {% if result %}
+        <p>{{ result }}</p>
+    {% endif %}
+</body>
+</html>

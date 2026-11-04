@@ -1,0 +1,219 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+:root {
+    --background: #0B1928;
+    --surface: #102337;
+    --surface-soft: #12334A;
+    --teal: #20C9B0;
+    --teal-light: #76E5D4;
+    --text: #E8F4F5;
+    --muted: #9BB2C2;
+    --border: #244257;
+    --success: #20C9B0;
+    --danger: #F16B75;
+    --warning: #F2B96F;
+}
+
+.stApp {
+    background: var(--background);
+    color: var(--text);
+    font-family: 'Inter', sans-serif;
+}
+
+[data-testid="stHeader"] {
+    background: transparent;
+}
+
+.block-container {
+    max-width: 1320px;
+    padding: 2rem 2rem 3rem;
+}
+
+h1, h2, h3 {
+    color: var(--text) !important;
+    font-family: 'Inter', sans-serif !important;
+    font-weight: 700 !important;
+    letter-spacing: -0.5px;
+}
+
+h1 { font-size: 2.25rem !important; }
+h2 { font-size: 1.55rem !important; }
+h3 { font-size: 1.2rem !important; }
+
+p, label, .stMarkdown {
+    color: var(--text);
+    line-height: 1.6;
+}
+
+[data-testid="stCaptionContainer"] {
+    color: var(--muted);
+}
+
+hr {
+    border-color: var(--border);
+    margin: 1.7rem 0;
+}
+
+/* Metric cards */
+[data-testid="stMetric"] {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 13px;
+    padding: 19px 21px;
+    min-height: 112px;
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.12);
+    transition: 0.2s ease;
+}
+
+[data-testid="stMetric"]:hover {
+    border-color: var(--teal);
+    transform: translateY(-2px);
+}
+
+[data-testid="stMetricLabel"] {
+    color: var(--muted) !important;
+    font-size: 0.85rem !important;
+}
+
+[data-testid="stMetricValue"] {
+    color: var(--teal-light) !important;
+    font-size: 1.8rem !important;
+    font-weight: 750 !important;
+}
+
+/* Buttons */
+.stButton > button,
+.stDownloadButton > button {
+    background: var(--teal);
+    color: #08251F;
+    border: 1px solid var(--teal);
+    border-radius: 9px;
+    padding: 0.62rem 1.15rem;
+    font-weight: 700;
+    transition: 0.2s ease;
+}
+
+.stButton > button:hover,
+.stDownloadButton > button:hover {
+    background: var(--teal-light);
+    border-color: var(--teal-light);
+    color: #08251F;
+}
+
+/* Input fields */
+.stTextInput input,
+.stTextArea textarea,
+.stNumberInput input {
+    background: var(--surface) !important;
+    color: var(--text) !important;
+    border: 1px solid var(--border) !important;
+    border-radius: 8px !important;
+}
+
+.stTextInput input:focus,
+.stTextArea textarea:focus,
+.stNumberInput input:focus {
+    border-color: var(--teal) !important;
+    box-shadow: 0 0 0 1px var(--teal) !important;
+}
+
+/* Select boxes */
+[data-testid="stSelectbox"] > div > div {
+    background: var(--surface);
+    border-color: var(--border);
+    border-radius: 8px;
+}
+
+/* Expanders */
+[data-testid="stExpander"] {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 11px;
+    overflow: hidden;
+}
+
+[data-testid="stExpander"] summary {
+    color: var(--text);
+    font-weight: 600;
+}
+
+/* Data tables */
+[data-testid="stDataFrame"] {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+/* Alerts */
+[data-testid="stAlert"] {
+    border-radius: 9px;
+}
+
+/* Slider and progress */
+[data-testid="stSlider"] {
+    color: var(--teal);
+}
+
+[data-testid="stProgress"] > div > div {
+    background: var(--teal);
+}
+
+/* Sidebar */
+[data-testid="stSidebar"] {
+    background: #0E2235;
+    border-right: 1px solid var(--border);
+}
+
+/* Footer */
+footer {
+    visibility: hidden;
+}
+
+/* Responsive layout */
+@media (max-width: 768px) {
+    .block-container {
+        padding: 1.2rem 1rem 2rem;
+    }
+
+    h1 {
+        font-size: 1.8rem !important;
+    }
+
+    [data-testid="stMetric"] {
+        padding: 14px;
+    }
+}
+
+/* =========================================
+   REAL OCEAN BACKGROUND
+   ========================================= */
+
+.stApp {
+    background:
+        linear-gradient(
+            rgba(5, 24, 39, 0.68),
+            rgba(5, 24, 39, 0.78)
+        ),
+        url("https://images.unsplash.com/photo-1500375592092-40eb2168fd21")
+        center center / cover fixed no-repeat !important;
+}
+
+/* Transparent glass-style dashboard cards */
+
+[data-testid="stMetric"],
+[data-testid="stExpander"],
+[data-testid="stDataFrame"] {
+    background: rgba(12, 45, 62, 0.88) !important;
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(32, 217, 189, 0.35) !important;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.22);
+}
+
+/* Keep content readable */
+
+.block-container {
+    position: relative;
+    z-index: 1;
+}
